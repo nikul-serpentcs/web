@@ -78,16 +78,13 @@ odoo.define("web_validation_dialog.ValidationDialog", function(require) {
                                               self.on_confirmed();
                                            } else {
                                                Dialog.alert(self, _t("Invalid or Wrong Password! Contact your Administrator."));
-                                               return;
                                            }
                                        }).fail(function(error) {
                                            framework.unblockUI();
                                            Dialog.alert(self, _t("Either the password is wrong or the connection is lost! Contact your Administrator."));
-                                           return;
                                        });
                                    } else {
                                        Dialog.alert(self, _t("Please Enter the Password."));
-                                       return;
                                    }
                                 }
                             },
